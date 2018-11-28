@@ -64,23 +64,23 @@
 
     Smoking not only cuts your lifespan by affecting your internal organs, but it also ages you on the
      outside by causing skin damage.
-   </p>
+    </p>
 
 
+    <div class="comment" *ngFor="let comment of comments; index as i">
+        <p>{{ comment.name }}</p>
+        <p>{{ comment.message }}</p>
+        <button (click)="delete(i)" class="btn_delete">Delete</button>
+    </div>
 
 
-
-  <p><label for="mail"><b>Text your email:</b></label></p>
-  <p><input [(ngModel)]="comment.name" type="text" name="mail" class="mail"></p>
-  <p><b>Text your comment:</b></p>
-  <p><textarea [(ngModel)]="comment.message" rows="10" cols="75" name="text"></textarea></p>
-  <p><input class="btn_send" type="submit" value="Send" (click)="send()"></p>
-
-
-  <div class="comment" *ngFor="let comment of comments">
-    <p>{{ comment.name }}</p>
-    <p>{{ comment.message }}</p>
-    <p [(ngModel)]="comment.delete" (click)="out()" class="btn_delete"> Delete {{ comment.delete }}</p>
-  </div>
-
+  <p>
+      <label for="mail"><b>Text your email:</b></label><br>
+      <input [(ngModel)]="comment.name" type="text" name="mail" class="mail">
+  </p>
+  <p>
+      <b>Text your comment:</b><br>
+      <textarea [(ngModel)]="comment.message" rows="10" cols="75" name="text"></textarea>
+  </p>
+    <button type="submit" (click)="send()">Send</button>
 </div>
