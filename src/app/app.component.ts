@@ -25,9 +25,9 @@ export class AppComponent {
     localStorage.setItem('comments', JSON.stringify(this.comments));
   }
 
-  out(): void_ {
-      this.comments.splice(0, 1);
-      localStorage.removeItem('comments', JSON.parse(this.comments));
-  }
+    out(index): void {
+        this.comments.splice(index, 1);
+        localStorage.setItem('comments', JSON.stringify(this.comments));
+    }
 
 }

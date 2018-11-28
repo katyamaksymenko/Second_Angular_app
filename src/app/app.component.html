@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center" class="main">
   <div class="bgFirst">
-    <h1>7 tips for a healthy lifestyle</h1>
+    <h1>Tips for a healthy lifestyle</h1>
     <h3> Living a healthy lifestyle doesn’t mean hours of training
        at the gym and eating only salad leaves.
        It’s about making easy-to-manage healthy choices in your day-to-day living. </h3>
@@ -25,17 +25,6 @@
     Parking furthest from the building and walking in, or
     Taking the stairs more often.
    </p>
-    <h3>We all stand together</h3>
-
-    <p>We spend our lives sitting – at our desks, in front of the TV,
-      in a meeting or on the phone. New research is emerging highlighting the potential
-      risk to health from all our sitting behaviour. So break your sitting time by standing
-      for five minutes and reap the health benefits.
-
-    Every little bit counts and it all adds up to burning more calories.
-
-</p>
-
     <h3>Eating healthily</h3>
 
     <p>When it comes to healthy eating, there is an overwhelming array
@@ -55,7 +44,7 @@
 
     <h3>Portion distortion</h3>
 
-   <p> Our food and drinks portion sizes have dramatically increased over the past 30 years.
+    <p> Our food and drinks portion sizes have dramatically increased over the past 30 years.
      In the 1950’s a chip packet was 28g from a take-away restaurant - today it’s 154g – and that’s
      not even the supersize, which is a whopping 196g!
 
@@ -66,14 +55,6 @@
     Eat your main meals off a smaller plate – visually the plate looks full so you will be satisfied,
      but technically you’ll be eating less.
    </p>
-    <h3>Colour me beautiful</h3>
-
-    <p>Choosing whole foods and cooking from scratch is a much healthier way to
-      eat than buying pre-packaged or ready-meals which are high in fat and salt but
-      very low in nutrients.
-
-    Your body will wear a frown if your meal is all brown.</p>
-
    <h3> Choose life </h3>
 
    <p> There is nothing more damaging to a long, healthy life than smoking, which is estimated as the
@@ -92,14 +73,14 @@
   <p><label for="mail"><b>Text your email:</b></label></p>
   <p><input [(ngModel)]="comment.name" type="text" name="mail" class="mail"></p>
   <p><b>Text your comment:</b></p>
-  <p><textarea [(ngModel)]="comment.message" rows="10" cols="45" name="text"></textarea></p>
-  <p><input type="submit" value="Send" (click)="send()"></p>
+  <p><textarea [(ngModel)]="comment.message" rows="10" cols="75" name="text"></textarea></p>
+  <p><input class="btn_send" type="submit" value="Send" (click)="send()"></p>
 
 
   <div class="comment" *ngFor="let comment of comments">
     <p>{{ comment.name }}</p>
     <p>{{ comment.message }}</p>
-    <p [(ngModel)]="comment.delete" (click)="out()" class="btn_delete"> delete {{ comment.delete }}</p>
+    <p [(ngModel)]="comment.delete" (click)="out()" class="btn_delete"> Delete {{ comment.delete }}</p>
   </div>
 
 </div>
